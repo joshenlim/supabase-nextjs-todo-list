@@ -17,6 +17,7 @@ export default function Home() {
   const [message, setMessage] = useState<string | null>(null)
 
   useEffect(() => {
+    console.log("wee")
     supabase.auth.getSession().then(({ data: { session } }) => setSession(session))
 
     const {
